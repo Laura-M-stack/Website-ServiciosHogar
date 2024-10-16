@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 
-    <title>ServiciosHogar - Conectamos profesionales contigo</title>
+    <title>ServiciosHogar - Conectamos profesionales con vos</title>
 </head>
 <body>
     <header>
@@ -23,8 +22,8 @@
 
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <h1>Encuentra al profesional perfecto<br>para tu hogar</h1>
-            <p>Conectamos a expertos cualificados con personas que necesitan servicios para el hogar de confianza.</p>
+            <h1>Encontrá al profesional perfecto para tu hogar</h1>
+            <p>Conectamos a profesionales calificados con clientes que necesitan servicios de calidad para su hogar</p>
             
             <a href="#profesionales"><button >Buscar Profesionales</button></a>
         </div>
@@ -32,6 +31,27 @@
 
     <section class="professionals" id="profesionales">
         <h2>Nuestros Profesionales</h2>
+
+        <div class="search-filters"></div>
+            <select id="category-filter">
+                <option value="">Todas las categorías</option>
+                <option value="electricista">Electricista</option>
+                <option value="pintora">Pintora</option>
+                <option value="plomero">Plomero</option>
+                <option value="carpintera">Carpintera</option>
+                <option value="jardinero">Jardinero</option>
+                <option value="decoradora">Decoradora</option>
+            </select>
+            <select id="location-filter">
+                <option value="">Todas las ubicaciones</option>
+                <option value="buenos aires">Buenos Aires</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="entre rios">Entre Ríos</option>
+                <option value="la pampa">La Pampa</option>
+                <option value="san luis">San Luis</option>
+            </select>
+        </div>
+
         <div class="cards-container">
             <div class="card">
                 <div class="card-image">
@@ -117,7 +137,7 @@
         <div class="footer-content">
             <div class="footer-section1">
                 <h3>Sobre Nosotros</h3>
-                <p>ServiciosHogar conecta a profesionales cualificados con clientes que necesitan servicios de calidad para su hogar.</p>
+                <p>ServiciosHogar conecta a profesionales calificados con clientes que necesitan servicios de calidad para su hogar.</p>
             </div>
 
             <!-- Información de contacto -->
@@ -146,5 +166,6 @@
 
 
     <script src="script.js"></script>
+    <script src="filter-script.js"></script>
 </body>
 </html>
