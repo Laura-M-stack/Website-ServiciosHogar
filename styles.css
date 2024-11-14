@@ -7,12 +7,20 @@
     --naranja-oscuro: #cd4901;
     --overlay:  rgba(0,0,0,0.5);
     --gris: #ddd;
+    --gris-oscuro: #7a7a7a;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 body {
@@ -57,6 +65,7 @@ nav ul li a {
     color:var(--negro);
     text-decoration: none;
     transition: color 0.3s;
+    font-size: large;
 }
 
 nav ul li a:hover {
@@ -104,7 +113,8 @@ nav ul li a:hover {
 }
 
 .hero-content a button {
-   width: 240px;
+   width: 280px;
+
 }
 
 .hero h1 {
@@ -203,6 +213,221 @@ button:hover {
     
 }
 
+/* Estilos base del formulario */
+.main-header-form {
+    margin-top: 70px;
+    color: var(--blanco-fondo);
+}
+.frm-back {
+    
+        background-image: url('images/fondo_home.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 80px;
+    }
+    
+    .frm-back::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:var(--overlay);
+        z-index: -1;
+    
+}
+
+#fs-frm {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color:var(--blanco-fondo);
+    border-radius: 8px;
+    box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
+  }
+  
+  /* Estilos del fieldset */
+  #fs-frm-inputs {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilos para las etiquetas */
+  #fs-frm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color:var(--negro);
+    font-size: 0.95rem;
+  }
+  
+  /* Estilos para los inputs y textarea */
+  #fs-frm input,
+  #fs-frm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 2px double var(--naranja);
+    border-radius: 4px;
+    background-color:var(--blanco-fondo);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  /* Estilos para el focus de inputs y textarea */
+  #fs-frm input:focus,
+  #fs-frm textarea:focus {
+    outline: none;
+    border-color: var(--naranja);
+    background-color:var(--blanco-fondo);
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+  }
+  
+  /* Estilos específicos para el textarea */
+  #fs-frm textarea {
+    min-height: 120px;
+    resize: vertical;
+    
+  }
+  
+  /* Estilos para el botón de envío */
+  #fs-frm input[type="submit"] {
+    background-color: var(--naranja);
+    color: var(--blanco-fondo);
+    font-size: large;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover del botón de envío */
+  #fs-frm input[type="submit"]:hover {
+    background-color: var(--naranja-oscuro);
+  }
+  
+  /* Estilos para el placeholder */
+  #fs-frm input::placeholder,
+  #fs-frm textarea::placeholder {
+    color: var(--gris-oscuro);
+  }
+  
+  /* Estilos para campos requeridos con error */
+  #fs-frm input:invalid:not(:placeholder-shown),
+  #fs-frm textarea:invalid:not(:placeholder-shown) {
+    border-color: #fc8181;
+  }
+
+/* Contenedor principal */
+.testimonials {
+    background-color: #f7fafc;
+    padding: 4rem 1rem;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos del encabezado */
+.testimonials-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color:var(--negro);
+    margin-bottom: 1rem;
+}
+
+.testimonials-subtitle {
+    text-align: center;
+    color: var(--negro);
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+/* Grid de testimonios */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Tarjeta de testimonio */
+.testimonial-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estrellas de calificación */
+.testimonial-rating {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Texto del testimonio */
+.testimonial-text {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    min-height: 80px;
+}
+
+/* Información del autor */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    color: #2d3748;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.author-info p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin: 0.2rem 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonials-title {
+        font-size: 2rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
 footer {
     background-color: var(--negro);
     color: var(--blanco-fondo);
@@ -237,6 +462,8 @@ hr {
     margin: auto;
     border-color: var(--naranja);
 }
+
+
 
 @keyframes fadeInUp {
     from {
