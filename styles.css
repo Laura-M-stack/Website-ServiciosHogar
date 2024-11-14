@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:wght@100..900&display=swap');
 
+:root {
+    --blanco-fondo: rgba(255, 255, 255, 0.95);
+    --negro: #333;
+    --naranja:  #FF6B00;
+    --naranja-oscuro: #cd4901;
+    --overlay:  rgba(0,0,0,0.5);
+    --gris: #ddd;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +21,8 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #333;
+    background-color: var(--blanco-fondo);
+    color: var(--negro);
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -32,7 +41,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #FF6B00;
+    color:var(--naranja);
 }
 
 nav ul {
@@ -45,13 +54,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color:var(--negro);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FF6B00;
+    color: var(--naranja);
 }
 
 .menu-toggle {
@@ -80,17 +89,18 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background:var(--overlay);
     z-index: -1;
 }
 
 .hero-content {
     max-width: 800px;
     padding: 2rem;
-    color: white;
+    color: var(--blanco-fondo);
     text-align: center;
     position: relative;
     z-index: 2;
+    text-shadow: 1px 1px 1px var(--overlay);
 }
 
 .hero-content a button {
@@ -126,20 +136,20 @@ nav ul li a:hover {
 .search-filters select {
    padding: 0.7rem;
    font-size: 3rem;
-   border: 1px solid #FF6B00;
+   border: 1px solid var(--naranja-oscuro);
    border-radius: 4px;
-   background-color:#FF6B00;
+   background-color:var(--naranja);
    cursor: pointer;
 }
 
 .search-filters select:focus {
    outline: none;
-   border-color: #FF6B00;
-   background-color: #FF6B00;
+   border-color: var(--naranja-oscuro);
+   background-color: var(--naranja);
 }
 
 .search-filters select option {
-   background-color: #FF6B00;
+   background-color: var(--naranja);
 }
 
 .cards-container {
@@ -150,11 +160,11 @@ nav ul li a:hover {
 }
 
 .card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--gris);
     border-radius: 8px;
     overflow: hidden;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    background-color: var(--blanco-fondo);
+    box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s forwards;
@@ -175,11 +185,11 @@ nav ul li a:hover {
 }
 
 button {
-    background-color: #FF6B00;
-    color: white;
+    background-color: var(--naranja);
+    color: var(--blanco-fondo);
     font-size: large;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     width: 100%;
     padding: 10px;
@@ -188,20 +198,21 @@ button {
 }
 
 button:hover {
-    background-color: #cd4901;
+    background-color: var(--naranja-oscuro);
     transform: translateY(-2px);
+    
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--negro);
+    color: var(--blanco-fondo);
     text-align: center;
     padding: 2rem;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .footer-section1 {
@@ -224,7 +235,7 @@ footer {
 hr {
     width: 75%;
     margin: auto;
-    border-color: #FF6B00;
+    border-color: var(--naranja);
 }
 
 @keyframes fadeInUp {
